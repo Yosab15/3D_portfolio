@@ -4,9 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 interface AnimatedTextProps {
   text: string
   className?: string
+  style?: React.CSSProperties
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = '' }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = '', style }) => {
   const ref = React.useRef<HTMLParagraphElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -16,7 +17,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = '' }) => 
   const characters = text.split('')
 
   return (
-    <p ref={ref} className={className}>
+    <p ref={ref} className={className} style={style}>
       {characters.map((char, index) => {
         const start = index / characters.length
         const end = (index + 1) / characters.length

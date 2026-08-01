@@ -2,7 +2,6 @@ import React, { useState, useRef, ReactNode } from 'react'
 
 interface MagnetProps {
   children: ReactNode
-  padding?: number
   strength?: number
   activeTransition?: string
   inactiveTransition?: string
@@ -10,7 +9,6 @@ interface MagnetProps {
 
 const Magnet: React.FC<MagnetProps> = ({ 
   children, 
-  padding = 150, 
   strength = 3,
   activeTransition = 'transform 0.3s ease-out',
   inactiveTransition = 'transform 0.6s ease-in-out'

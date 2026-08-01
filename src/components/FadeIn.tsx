@@ -8,6 +8,7 @@ interface FadeInProps extends MotionProps {
   x?: number
   y?: number
   as?: keyof React.JSX.IntrinsicElements
+  className?: string
 }
 
 const FadeIn: React.FC<FadeInProps> = ({ 
@@ -17,12 +18,14 @@ const FadeIn: React.FC<FadeInProps> = ({
   x = 0, 
   y = 30,
   as = 'div',
+  className,
   ...motionProps 
 }) => {
   const MotionComponent = motion.create(as as any)
   
   return (
     <MotionComponent
+      className={className}
       initial={{ opacity: 0, x, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "50px", amount: 0 }}
