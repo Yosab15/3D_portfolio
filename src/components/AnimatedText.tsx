@@ -25,7 +25,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = '', style
         
         return (
           <span key={index} className="inline-block relative">
-            <span className="invisible">{char}</span>
+            <span className="invisible whitespace-pre">
+              {char}
+            </span>
             <motion.span
               style={{ opacity, position: 'absolute', left: 0, top: 0 }}
             >

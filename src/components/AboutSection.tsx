@@ -47,9 +47,9 @@ const AboutSection: React.FC = () => {
           </h2>
         </FadeIn>
 
-        <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
+        <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24 text-center">
           <AnimatedText
-            text="Full-Stack Developer with experience building scalable web applications using ASP .NET Core and Angular. Skilled in RESTful APIs, Entity Framework Core, SQL Server, JWT Authentication, and Clean Architecture. Passionate about developing secure, maintainable, and high-performance applications."
+            text="Full-Stack Developer with experience building scalable web applications using ASP .NET Core and Angular.Skilled in RESTful APIs, Entity Framework Core, SQL Server,       JWT Authentication, and Clean Architecture. Passionate about developing secure, maintainable,and high-performance applications."
             className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
             style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
           />
